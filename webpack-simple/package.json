@@ -1,0 +1,27 @@
+{
+  "name": "webpack-simple",
+  "version": "1.0.0",
+  "description": "bundle some test module using webpack development tool'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"dev": "webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-sabagh/webpack-sample.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "a-sabagh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-sabagh/webpack-sample/issues"
+  },
+  "homepage": "https://github.com/a-sabagh/webpack-sample#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
