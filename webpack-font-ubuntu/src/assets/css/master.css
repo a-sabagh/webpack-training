@@ -1,0 +1,5 @@
+@import '~@fontsource/ubuntu/300.css';
+
+body{
+	font-family: 'Ubuntu';
+}
