@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 
 const config = {
-	mode: "development",
+	mode: "production",
 	module: {
 		rules: [
 			{
