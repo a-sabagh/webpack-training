@@ -12,14 +12,8 @@ const config = {
 				]
 			},
 			{
-				test: /\.(woff(2)?|ttf|eot|svg)$/,
-				use: {
-					loader: 'file-loader',
-					options: {
-						outputPath: 'fonts',
-						name: '[name].[ext]'
-					}
-				}
+				test: /\.(woff|eot|ttf)$/,
+				use: 'url-loader',
 			}
 		]
 	}
