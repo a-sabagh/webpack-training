@@ -9,7 +9,7 @@ const config = {
 	},
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname,'./build')
+		path: path.resolve(__dirname,'./build'),
 	},
 	module: {
 		rules: [
@@ -31,7 +31,9 @@ const config = {
 					{
 						loader: MiniCssExtractPlugin.loader,
 					},
-					'css-loader'
+					{
+						loader: 'css-loader',
+					}
 				]
 			},
 			{
@@ -40,19 +42,38 @@ const config = {
 					{
 						loader: MiniCssExtractPlugin.loader,
 					},
-					'css-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							url: {
+								filter: (url,resourcePath) => {
+									return !url.startsWith('./img')
+								}
+							},
+						}
+					},
 					'sass-loader',
 				]
 			},
 			{
 				test: /\.(woff|eot|ttf|svg|jpg|png|gif)$/i,
-				use: 'file-loader',
+				use: [
+					 {
+						loader: 'url-loader',
+						options: {
+							limit: 10000,
+							name: 'assets/css/fonts/[name].[ext]',
+						}
+					 }
+				]
 			}
 		]
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
-		new MiniCssExtractPlugin(),
+		new MiniCssExtractPlugin({
+			filename: 'assets/css/[name].css',
+		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: './src/index.html',
