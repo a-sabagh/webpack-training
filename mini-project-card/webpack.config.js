@@ -34,11 +34,7 @@ const config = {
 					{
 						loader: 'css-loader',
 						options: {
-							url: {
-								filter: (url,resourcePath) => {
-									return !url.startsWith('./img')
-								}
-							},
+							url: {},
 						}
 					},
 					'sass-loader',
@@ -49,10 +45,7 @@ const config = {
 				use: [
 					 {
 						loader: 'url-loader',
-						options: {
-							limit: 10000,
-							name: 'assets/css/fonts/[name].[ext]',
-						}
+						options: {}
 					 }
 				]
 			}
