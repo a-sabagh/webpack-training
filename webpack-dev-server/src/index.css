@@ -1,0 +1,12 @@
+h1{
+	text-align: center;
+	background: yellow;
+	padding: 1em;
+	margin-bottom: 0;
+}
+p{
+	color: white;
+	margin-top: 0;
+	padding: .5em;
+	background: black;
+}
