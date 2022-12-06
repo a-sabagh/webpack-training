@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 const config = {
 	mode: "development",
+	devtool: 'source-map',
 	entry: {
 		index: './src/index.js',
 	},
