@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 const config = {
-	mode: "development",
+	mode: "production",
 	devtool: 'source-map',
 	entry: {
 		index: './src/index.js',
