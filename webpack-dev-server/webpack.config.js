@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const config = {
 	mode: 'development',
+	devtool: 'eval',
 	module: {
 		rules: [
 			{
