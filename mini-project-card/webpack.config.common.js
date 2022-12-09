@@ -7,7 +7,7 @@ const config = {
 		index: './src/index.js',
 	},
 	output: {
-		filename: '[name].js',
+		filename: '[name][contenthash].js',
 		path: path.resolve(__dirname,'./build'),
 	},
 	module: {
@@ -53,7 +53,7 @@ const config = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-			filename: 'assets/css/[name].css',
+			filename: 'assets/css/[name][contenthash].css',
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
