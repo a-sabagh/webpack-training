@@ -12,13 +12,13 @@ const config = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'index',
+			title: ['index'],
 			filename: 'index.html',
 			chunks: 'index',
 			hash: true,
 		}),
 		new HtmlWebpackPlugin({
-			title: 'about',
+			title: ['about'],
 			filename: 'about.html',
 			chunks: 'about',
 			hash: true,
